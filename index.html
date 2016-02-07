@@ -79,6 +79,36 @@
                         <ul class="list-inline login-signup-buttons">
                             <li>
                                 <a href="login.html" class="btn btn-default btn-lg">Login</a>
+
+<html>
+<head>
+  <meta name="google-signin-client_id" content="127458928827-fqv870krbe8ie53nd7i1712ebvj0ts8r.apps.googleusercontent.com","project_id":"mtholyoke.edu:api-project-127458928827","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://accounts.google.com/o/oauth2/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"AYDZDIYVwexWyzUfOctimptf.apps.googleusercontent.com">
+</head>
+<body>
+  <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'https://www.googleapis.com/auth/plus.login',
+        'width': 200,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html>
                             </li>
                             <li>
                                 <a href="#" class="btn btn-default btn-lg">Sign Up</a>
